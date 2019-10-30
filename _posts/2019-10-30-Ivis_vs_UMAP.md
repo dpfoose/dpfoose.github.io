@@ -81,7 +81,8 @@ Ivis does a pretty good job of preserving the overall global structure.
 ### PBMC dataset
 This example comes from [this R vignette](https://github.com/beringresearch/ivis/blob/master/R-package/vignettes/ivis_singlecell.Rmd), with the post-processing 
 done using `scikit-learn` and the python `phenograph` package in place of the R package `Seurat`. 
-The PBMC dataset was transformed using PCA, reducing its number of features to the number of samples.
+The PBMC dataset was transformed using PCA, reducing its number of features to the number of samples. The data were then clustered using the [PhenoGraph](https://github.com/jacoblevine/PhenoGraph)
+algorithm.
 <div id="pbmc-graph"></div>
 There are two outliers way outside of the range of the other points:
 <div id="pbmc-umap-graph"></div>
