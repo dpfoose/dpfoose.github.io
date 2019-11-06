@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Universal Sentence Embeddings</title>
+  </head>
+  <body>
+    <main id='ivis-graph'></main>
+    <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?..."></script>
+    <script>
+      Plotly.d3.json('/assets/data/use_ivis.json', (figure) => {
+        figure.layout.title = 'Universal Sentence Embeddings';
+        delete figure.layout;
+        const layout = {
+          title: 'Universal Sentence Embeddings',
+          height: 900
+        };
+        Plotly.newPlot('ivis-graph', figure.data, layout, {responsive: true});
+      });
+    </script>
+  </body>
+</html>
